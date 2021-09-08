@@ -22,15 +22,17 @@ AppFactory::setContainer($container);
 
 $app = AppFactory::create();
 
-$app->get('/hello/{name}', function(Request $request, Response $response, array $args =[]){
-        $html = $this->get('templating')->render('hello.html', [
-            'name' => $args['name']
-        ]);
-        $response->getBody()->write($html);
-        return $response;
-});
+// $app->get('/hello/{name}', function(Request $request, Response $response, array $args =[]){
+//         $html = $this->get('templating')->render('hello.html', [
+//             'name' => $args['name']
+//         ]);
+//         $response->getBody()->write($html);
+//         return $response;
+// });
 
+$app->get('/', 'App\Controller\IndexController:homepage');
 
+$app->run();
 
 // Varasemalt testitud route
 //
@@ -49,5 +51,3 @@ $app->get('/hello/{name}', function(Request $request, Response $response, array 
 //     $response->getBody()->write(sprintf("Hello, %s!", $name) );
 //     return $response;
 // });
-
-$app->run();
