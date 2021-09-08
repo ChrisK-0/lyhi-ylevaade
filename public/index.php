@@ -12,4 +12,15 @@ $app->get('/', function (Request $request, Response $response) {
     return $response;
 });
 
+$app->get('/hello/pepe', function (Request $request, Response $response) {
+    $response->getBody()->write("Hello Pepe the frog!");
+    return $response;
+});
+
+$app->get('/hello/{name}', function (Request $request, Response $response, array $args){
+    $name = ucfirst($args['name']);
+    $response->getBody()->write(sprintf("Hello, %s!", $name) );
+    return $response;
+});
+
 $app->run();
