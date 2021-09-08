@@ -8,24 +8,46 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $container = new Container();
 
+$container->set('templating', function(){
+    return new Mustache_Engine([
+        'loader' => new 
+            Mustache_Loader_FilesystemLoader(__DIR__ . '/../templates',
+                ['extension' => '']
+        )
+    ]);
+});
+
+
 AppFactory::setContainer($container);
 
 $app = AppFactory::create();
 
-$app->get('/', function (Request $request, Response $response) {
-    $response->getBody()->write("Hello Slim!");
-    return $response;
+$app->get('/hello/{name}', function(Request $request, Response $response, array $args =[]){
+        $html = $this->get('templating')->render('hello.html', [
+            'name' => $args['name']
+        ]);
+        $response->getBody()->write($html);
+        return $response;
 });
 
-$app->get('/hello/pepe', function (Request $request, Response $response) {
-    $response->getBody()->write("Hello Pepe the frog!");
-    return $response;
-});
 
-$app->get('/hello/{name}', function (Request $request, Response $response, array $args){
-    $name = ucfirst($args['name']);
-    $response->getBody()->write(sprintf("Hello, %s!", $name) );
-    return $response;
-});
+
+// Varasemalt testitud route
+//
+// $app->get('/', function (Request $request, Response $response) {
+//     $response->getBody()->write("Hello Slim!");
+//     return $response;
+// });
+
+// $app->get('/hello/pepe', function (Request $request, Response $response) {
+//     $response->getBody()->write("Hello Pepe the frog!");
+//     return $response;
+// });
+
+// $app->get('/hello/{name}', function (Request $request, Response $response, array $args){
+//     $name = ucfirst($args['name']);
+//     $response->getBody()->write(sprintf("Hello, %s!", $name) );
+//     return $response;
+// });
 
 $app->run();
