@@ -30,7 +30,7 @@ $app = AppFactory::create();
 //         return $response;
 // });
 
-$app->get('/', 'App\Controller\IndexController:homepage');
+$app->get('/', 'App\Controller\AlbumsController:default');
 
 $app->run();
 
