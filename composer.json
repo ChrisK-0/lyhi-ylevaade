@@ -8,6 +8,7 @@
         "slim/slim": "4.*",
         "slim/psr7": "^1.4",
         "php-di/php-di": "^6.3",
-        "mustache/mustache": "^2.13"
+        "mustache/mustache": "^2.13",
+        "slim/http": "^1.2"
     }
 }
