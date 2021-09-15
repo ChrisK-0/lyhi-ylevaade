@@ -1,131 +1,150 @@
 [
 
     {
-
+        "id": 1,
         "title": "Insomniac",
 
-        "artist": "Green Day"
-
+        "artist": "Green Day",
+        "type": "Soul",
+        "year": 1987
     },
 
     {
-
+        "id": 15,
         "title": "American Idiot",
 
-        "artist": "Green Day"
-
+        "artist": "Green Day",
+        "type": "Soul",
+        "year": 1987
     },
 
     {
-
+        "id": 2,
         "title": "Conspiracy of One",
 
-        "artist": "Offspring"
-
+        "artist": "Offspring",
+        "type": "Soul",
+        "year": 1987
     },
 
     {
-
+        "id": 3,
         "title": "Dead Silience",
 
-        "artist": "Billy Talent"
+        "artist": "Billy Talent",
+        "type": "Soul",
+        "year": 1987
 
     },
 
     {
-
+        "id": 4,
         "title": "ANThology",
 
-        "artist": "Alien Ant Farm"
+        "artist": "Alien Ant Farm",
+        "type": "Soul",
+        "year": 1987
 
     },
 
     {
-
+        "id": 5,
         "title": "Enema of the State",
 
-        "artist": "Blink-182"
+        "artist": "Blink-182",
+        "type": "HardBass",
+        "year": 1987
 
     },
 
     {
-
+        "id": 6,
         "title": "Pennybridge Pioneers",
 
-        "artist": "Milencolin"
-
+        "artist": "Milencolin",
+        "type": "HardBass",
+        "year": 1987
     },
 
     {
-
+        "id": 7,
         "title": "Chuck",
 
-        "artist": "Sum 41"
-
+        "artist": "Sum 41",
+        "type": "HardBass",
+        "year": 1996
     },
 
     {
-
+        "id": 8,
         "title": "The State",
 
-        "artist": "Nickelback"
-
+        "artist": "Nickelback",
+        "type": "HardBass",
+        "year": 1933
     },
 
     {
-
+        "id": 9,
         "title": "Silver Side Up",
 
-        "artist": "Nickelback"
-
+        "artist": "Nickelback",
+        "type": "HardBass",
+        "year": 1965
     },
 
     {
-
+        "id": 10,
         "title": "Fallen",
 
-        "artist": "Evenescence"
-
+        "artist": "Evenescence",
+        "type": "Country",
+        "year": 1999
     },
 
     {
-
+        "id": 11,
         "title": "Scripted",
 
-        "artist": "Icon For Hire"
-
+        "artist": "Icon For Hire",
+        "type": "Country",
+        "year": 1997
     },
 
     {
-
+        "id": 12,
         "title": "Icon For Hire",
 
-        "artist": "Icon For Hire"
-
+        "artist": "Icon For Hire",
+        "type": "Country",
+        "year": 1991
     },
 
     {
-
+        "id": 13,
         "title": "You Can't Kill Us",
 
-        "artist": "Icon For Hire"
-
+        "artist": "Icon For Hire",
+        "type": "Country",
+        "year": 1975
     },
 
     {
-
+        "id": 14,
         "title": "Sleeping With Ghosts",
 
-        "artist": "Placebo"
-
+        "artist": "Placebo",
+        "type": "Country",
+        "year": 1999
     },
 
     {
-
+        "id": 15,
         "title": "Steal This Album",
 
-        "artist": "System of a Down"
-
+        "artist": "System of a Down",
+        "type": "Reggae",
+        "year": 1999
     }
 
 ]

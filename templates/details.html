@@ -4,7 +4,7 @@
 	Albums
 </h1>
 
-<div class="albums">
+<!-- <div class="albums">
 	{{#albums}}
 	<div>
 		<h1>
@@ -17,6 +17,15 @@
 		</p>
 	</div>
 	{{/albums}}
-</div>
+</div> -->
+
+{{#album}}
+<h1>{{title}}</h1>
+<p>Artist: {{artist}}</p>
+<p>Type: {{type}}</p>
+<p>Year: {{year}}</p>
+
+{{/album}}
+
 
 {{> footer.html}}
