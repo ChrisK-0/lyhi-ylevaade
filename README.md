@@ -1,3 +1,3 @@
-# Initial commit
+# Album showcase
 
-Tested framework
+Little project for showing Albums as a whole and individiually. Uses PHP.
