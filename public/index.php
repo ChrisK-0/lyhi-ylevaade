@@ -36,18 +36,19 @@ $app->get('/details/{id:[0-9]+}', 'App\Controller\AlbumsController:details');
 
 $app->get('/search', 'App\Controller\AlbumsController:search');
 $app->any('/form', 'App\Controller\AlbumsController:form');
+$app->get('/api', 'App\Controller\ApiController:search');
 
 // during developement, keep first paramter true, instead of false
 //                      addErrorMiddleWare( >>>false<<< , true, true);
-$errorMiddleware = $app->addErrorMiddleWare(false, true, true);
+// $errorMiddleware = $app->addErrorMiddleWare(false, true, true);
 
-$errorMiddleware->setErrorHandler(
-    Slim\Exception\HttpNotFoundException::class,
-    function(Psr\Http\Message\ServerRequestInterface $request) use ($container){
-        $controller = new App\Controller\ExceptionController($container);
-        return $controller->notFound($request);
-    }
-);
+// $errorMiddleware->setErrorHandler(
+//     Slim\Exception\HttpNotFoundException::class,
+//     function(Psr\Http\Message\ServerRequestInterface $request) use ($container){
+//         $controller = new App\Controller\ExceptionController($container);
+//         return $controller->notFound($request);
+//     }
+// );
 
 
 $app->run();
